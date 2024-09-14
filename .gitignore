@@ -1,0 +1,13 @@
+node_modules
+dist
+dev-dist
+.env
+*.tsbuildinfo
+vite.config.ts.timestamp-*.mjs
+coverage
+test-results/
+playwright-report/
+playwright/.cache/
+test-results/
+playwright-report/
+playwright/.cache/

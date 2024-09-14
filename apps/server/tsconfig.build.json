@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "module": "CommonJS"
+  },
+  "extends": "./tsconfig.json",
+  "exclude": ["src/**/*.test.ts"]
+}
