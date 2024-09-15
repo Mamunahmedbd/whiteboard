@@ -3,6 +3,6 @@ export default {
   port: Number(process.env.PORT || 3003),
   corsOrigin: {
     prod: 'https://whiteboard.ispcrmcloud.com',
-    dev: 'http://localhost:5174',
+    dev: 'https://whiteboard.ispcrmcloud.com',
   },
 } as const;
