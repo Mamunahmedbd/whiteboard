@@ -1,4 +1,4 @@
-# whiteboard
+# Whiteboard
 
 **A virtual whiteboard tool for sketching diagrams.**
 
