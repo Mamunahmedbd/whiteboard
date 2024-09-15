@@ -7,13 +7,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   server: {
     port: 5174,
-    proxy: {
-      '/share': {
-        target: 'ws://localhost:7456',
-        ws: true,
-        secure: false,
-      },
-    },
   },
   plugins: [
     react(),
@@ -51,37 +44,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/': new URL('./src/', import.meta.url).pathname,
-    },
-  },
-  test: {
-    globals: true,
-    include: ['./src/**/*.test.ts?(x)'],
-    setupFiles: ['./src/test/setup.ts'],
-    environment: 'jsdom',
-    deps: {
-      optimizer: {
-        web: {
-          include: ['vitest-canvas-mock'],
-        },
-      },
-    },
-    threads: false,
-    environmentOptions: {
-      jsdom: {
-        resources: 'usable',
-      },
-    },
-    coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-      all: true,
-      include: [
-        'src/components/**/*',
-        'src/hooks/**/*',
-        'src/utils/**/*',
-        'src/stores/**/*',
-      ],
-      extension: ['.ts', '.tsx'],
     },
   },
   optimizeDeps: {

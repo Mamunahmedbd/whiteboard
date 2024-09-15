@@ -50,6 +50,12 @@ Attempt to run linter auto-fix in all workspaces:
 pnpm g:fix-all-files
 ```
 
+Make sure to build client and server before starting the production mode:
+
+```bash
+pnpm g:build
+```
+
 Run client in development mode:
 
 ```bash

@@ -8,10 +8,6 @@
     "dev": "vite",
     "build": "vite build && tsc",
     "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "test:coverage": "vitest run --coverage",
     "fix-all-files": "eslint . --ext .ts,.tsx --fix",
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc --noEmit"
@@ -48,7 +44,6 @@
     "@babel/core": "^7.21.3",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.0",
-    "@playwright/test": "^1.41.2",
     "@redux-devtools/core": "^3.13.1",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",

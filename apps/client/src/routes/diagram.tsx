@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import DrawingCanvas from '@/components/Canvas/DrawingCanvas/DrawingCanvas';
 import ContextMenu, {
   type ContextMenuType,
 } from '@/components/ContextMenu/ContextMenu';
 import Loader from '@/components/Elements/Loader/Loader';
 import Panels from '@/components/Panels/Panels';
-import { type AppState, LOADING_TEXT } from '@/constants/app';
+import { LOADING_TEXT } from '@/constants/app';
 import useWindowSize from '@/hooks/useWindowSize/useWindowSize';
 import api from '@/services/api';
 import { canvasActions } from '@/services/canvas/slice';
@@ -45,56 +46,10 @@ export default function Diagram() {
         });
 
         if (data?.data && data.data.data._id) {
-          dispatch(canvasActions.set(data.data.data as AppState['page']));
-          // dispatch(
-          //   canvasActions.set({
-          //     _id: '66e573c1db1d484db5c86041',
-          //     name: 'testing',
-          //     nodes: [
-          //       {
-          //         type: 'rectangle',
-          //         nodeProps: {
-          //           id: '5eb3204a-6601-48fd-bfc2-cb6575305a25',
-          //           point: [594.4000244140625, 209.80003356933594],
-          //           width: 81.5999755859375,
-          //           height: 71.99998474121094,
-          //           rotation: 0,
-          //           visible: true,
-          //         },
-          //         text: null,
-          //         style: {
-          //           color: 'teal600',
-          //           line: 'dotted',
-          //           size: 'medium',
-          //           animated: true,
-          //           opacity: 1,
-          //         },
-          //       },
-          //     ],
-          //     stageConfig: {
-          //       scale: 1,
-          //       position: {
-          //         x: 0,
-          //         y: 0,
-          //       },
-          //     },
-          //     toolType: 'select',
-          //     selectedNodeIds: {
-          //       '5eb3204a-6601-48fd-bfc2-cb6575305a25': true,
-          //     },
-          //     copiedNodes: [],
-          //     currentNodeStyle: {
-          //       color: 'teal600',
-          //       size: 'medium',
-          //       animated: true,
-          //       line: 'dotted',
-          //       opacity: 1,
-          //     },
-          //   }),
-          // );
+          dispatch(canvasActions.set(data.data.data as any));
         }
 
-        if (data?.status === 404) {
+        if ((data as any)?.status === 404) {
           navigate('/');
           return;
         }

@@ -5,5 +5,5 @@
     "module": "CommonJS"
   },
   "extends": "./tsconfig.json",
-  "exclude": ["src/**/*.test.ts"]
+  "exclude": ["node_modules", "dist", "coverage", "tsconfig.tsbuildinfo"]
 }
