@@ -4,7 +4,7 @@
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/screenshot-dark.png">
-    <img alt="whiteboard" src="./assets/screenshot.png" style="visibility:visible max-width:100%;">
+    <img alt="whiteboard" src="./assets/screenshot-dark.png" style="visibility:visible max-width:100%;">
 </picture>
 
 # Features
@@ -101,4 +101,3 @@ Awesome open-source packages used in this project:
 - [Stitches](https://stitches.dev)
 - [zod](https://zod.dev)
 - [MongoDB](https://www.mongodb.com/)
-- [qr-code](https://github.com/soldair/node-qrcode)

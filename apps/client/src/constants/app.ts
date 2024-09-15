@@ -2,19 +2,13 @@ import { Schemas } from 'shared';
 import { z } from 'zod';
 import type { User } from 'shared';
 
-export const BASE_URL = 'http://localhost:3003/v1';
-
-export const BASE_WS_URL = 'wss://whiteboard-api.onrender.com';
-export const BASE_WS_URL_DEV = 'ws://localhost:7456';
+export const BASE_URL = 'https://whiteboard-api.ispcrmcloud.com/v1';
 
 export const IS_PROD = process.env.NODE_ENV === 'production';
 
 export const LOCAL_STORAGE_KEY = 'whiteboard';
 export const LOCAL_STORAGE_LIBRARY_KEY = 'whiteboard-library';
 export const LOCAL_STORAGE_THEME_KEY = 'whiteboard-theme';
-export const LOCAL_STORAGE_COLLAB_KEY = 'whiteboard-collab';
-
-export const WS_THROTTLE_MS = 16;
 
 export const PROJECT_FILE_EXT = 'whiteboard';
 export const PROJECT_FILE_NAME = 'project';
